@@ -318,7 +318,7 @@ float Subtitle::GetMixWeight(Definition* pDef, float at, StringMapW<float>& offs
             CStringW direction = (*pDef)[L"direction"].IsValue() ? (*pDef)[L"direction"] : L"fw";
             if(direction == L"fwbw" || direction == L"bwfw") t *= 2;
 
-            float n;
+            double n;
             t = modf(t, &n);
 
             if(direction == L"bw"

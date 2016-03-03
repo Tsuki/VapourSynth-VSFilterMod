@@ -28,7 +28,7 @@
 #include <moreuuids.h>
 
 #include <initguid.h>
-#include <d3dx9.h>
+#include <d3d9.h>
 #include <dxva.h>
 #include <dxva2api.h>
 
@@ -884,7 +884,7 @@ cdrom_t GetCDROMType(TCHAR drive, CAtlList<CString>& files)
                 {
                     for(ptrdiff_t i = TOC.FirstTrack; i <= TOC.LastTrack; i++)
                     {
-                        // MMC-3 Draft Revision 10g: Table 222 – Q Sub-channel control field
+                        // MMC-3 Draft Revision 10g: Table 222 EQ Sub-channel control field
                         TOC.TrackData[i-1].Control &= 5;
                         if(TOC.TrackData[i-1].Control == 0 || TOC.TrackData[i-1].Control == 1)
                         {
@@ -2048,7 +2048,7 @@ static struct
     {"Vai", "vai", ""},
     {"Venda", "ven", "ve"},
     {"Vietnamese", "vie", "vi",				MAKELCID(MAKELANGID(LANG_VIETNAMESE, SUBLANG_DEFAULT), SORT_DEFAULT)},
-    {"Volapük", "vol", "vo"},
+    {"VolapE", "vol", "vo"},
     {"Votic", "vot", ""},
     {"Wakashan languages", "wak", ""},
     {"Walamo", "wal", ""},
