@@ -1029,11 +1029,11 @@ namespace Plugin
 			if (err)
 				d.fps = -1;
 
-//			d.vfr = vsapi->propGetData(in, "vfr", 0, &err);
-//			if (err)
+			d.vfr = vsapi->propGetData(in, "vfr", 0, &err);
+			if (err)
 				d.vfr = nullptr;
-//			else
-//				d.vfr_translator = GetVFRTranslator(d.vfr);
+			else
+				d.vfr_translator = GetVFRTranslator(d.vfr);
 
 
 			d.swapuv = !!vsapi->propGetInt(in, "swapuv", 0, &err);
